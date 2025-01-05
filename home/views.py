@@ -1,3 +1,6 @@
+import email
+from email import message
+from os import name
 from django.shortcuts import render, HttpResponse
 
 # Create your views here.
@@ -6,6 +9,8 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
+
+from home import models
 from .pdf_chat import chat_with_together_ai, extract_text_from_pdf
 
 # API view for chatbot
@@ -51,9 +56,9 @@ def contact(request):
     if request.method == "POST":
         name == request.POST['name']
         email == request.POST['email']
-        subject == request.POST['subject']
+        object == request.POST['subject']
         message == request.POST['message']
-        contact = models.Home(name=name, email=email, subject=subject, message=message)
+        contact = models.Home(name=name, email=email, subject=object, message=message)
         contact.save()
     return render(request, 'home.html')
 
