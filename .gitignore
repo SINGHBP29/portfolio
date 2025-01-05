@@ -1,0 +1,5 @@
+.env/
+home/config.py/
+Django_Portfilio_MohammadBurhan/__pycache__/
+home/__pycache__/
+home/migrations/__pycache__/
