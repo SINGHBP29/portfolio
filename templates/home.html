@@ -831,7 +831,7 @@
   </main><!-- End #main -->
 
   <!-- Chatbot -->
-  <style>
+<style>
         {% comment %} Chatbot container styles  {% endcomment %}
         #chatbot-container {
             position: fixed;
@@ -905,7 +905,6 @@
     </style>
 {% comment %} </head>
 <body> {% endcomment %}
-
     <!-- Chatbot container -->
     <div id="chatbot-container">
         <div id="chatbot-header">Chat with Me</div>
@@ -940,6 +939,7 @@
                     body: JSON.stringify({ query: userMessage }),
                     headers: {
                         'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
                     },
                 });
                 const data = await response.json();
@@ -953,7 +953,6 @@
             }
         }
     </script>
-
 
   <!-- ======= Footer ======= -->
   {% comment %} <footer id="footer">
