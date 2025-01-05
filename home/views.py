@@ -21,7 +21,7 @@ def chatbot_api(request):
         user_query = data.get('query', '')
 
         # Path to the PDF
-        pdf_path = r"static/files/pdf/Bhanu_Bert.pdf"  # Update this with your PDF path
+        pdf_path = r"static/files/Bhanu_Bert.pdf"  # Update this with your PDF path
 
         # Extract text from PDF
         pdf_text = extract_text_from_pdf(pdf_path)
