@@ -15,3 +15,6 @@ django-import-export
 django-jazzmin
 django-tailwind
 django-allauth
+requests
+flask
+PyPDF2
