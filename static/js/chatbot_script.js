@@ -10,6 +10,7 @@ document.getElementById('chatbot-input').addEventListener('keypress', function(e
     }
 });
 
+
 async function sendMessage() {
     const userMessage = document.getElementById('chatbot-input').value.trim();
     if (!userMessage) return;
