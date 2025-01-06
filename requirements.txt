@@ -17,4 +17,4 @@ django-tailwind
 django-allauth
 requests
 PyPDF2
-# whitenoise
+whitenoise
